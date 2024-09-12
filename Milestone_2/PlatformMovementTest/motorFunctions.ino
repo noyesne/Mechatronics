@@ -1,4 +1,8 @@
-//  Never change these functions
+ 
+ 
+ 
+ 
+ //  Never change these functions
 //  If they have the reversed outcome rewire the platform
 //  Do not re-write these functions
 void platformForward()

@@ -1,5 +1,6 @@
 
 void state2Setup() {
+  Serial.println("In State 2 setup");
   platformSpinLeft();
   startTime = millis();
   state = 2;

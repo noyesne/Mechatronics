@@ -1,5 +1,6 @@
 
 void state1Setup() {
+  Serial.println("In State1setup");
   platformForward();
   startTime = millis();
   state = 1;

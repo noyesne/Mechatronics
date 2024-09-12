@@ -1,5 +1,6 @@
 
 void state4Setup() {
+  Serial.println("In state 4 setup");
   platformBackward();
   startTime = millis();
   state = 4;

@@ -24,6 +24,7 @@ void setup() {
   pinMode(rightA, OUTPUT);
   pinMode(rightB, OUTPUT);
   state1Setup();
+  Serial.begin(9600);
 }
 
 
