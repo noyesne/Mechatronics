@@ -34,6 +34,7 @@ void platformSpinRight()
 void leftForward()
 {
       digitalWrite(leftA, HIGH);
+      Serial.print("IN HERE");
       digitalWrite(leftB, LOW); 
 }
 void leftBackward()
