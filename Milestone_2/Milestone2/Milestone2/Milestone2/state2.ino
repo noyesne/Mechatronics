@@ -7,23 +7,17 @@ void state2Setup() {
 
 void state2() {
   unsigned long currentTime = millis();
-  startTime = millis();
-
   if (count < 1) {
-    Serial.println("IN THIS STATEMENT");
-    Serial.println(count);
-    delay(2000);
     state2Position();
   }
-  
-  count = count + 1;
+  count++;
 
   if(currentTime - startTime >= 300) {
     if (digitalRead(frontButton) == HIGH) {
       platformStop();
       for (int i = 0; i < 3; i++) {
-        tone(buzzerPin, NOTE_C5, 500);
-        delay(1000);
+        tone(buzzerPin, NOTE_A5, 500);
+        delay(500);
       }
       state3Setup();
     }
@@ -32,7 +26,7 @@ void state2() {
 
 void state2Position() {
   
-  delay(500);
+  delay(1000);
 
   startTime = millis();
   unsigned long currentTime = millis();

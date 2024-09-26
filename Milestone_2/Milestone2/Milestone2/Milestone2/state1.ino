@@ -15,7 +15,7 @@ void state1() {
   if (currentTime - startTime >= 500) {
     if (digitalRead(frontButton) == HIGH) {
       platformStop();
-      for (int i = 0; i < 2; i++) {
+      for (int i = 0; i < 3; i++) {
         tone(buzzerPin, NOTE_A5, 500);
         delay(1000);
       }
