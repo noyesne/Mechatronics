@@ -15,7 +15,7 @@ unsigned long startTime;   // will store the time the state was setup
 
 // the following variable is a long because the time, measured in miliseconds,
 // will quickly become a bigger number than can be stored in an int.
-long interval = 2000;           // interval at which to change
+long interval = 1000;           // interval at which to change
 
 void setup() {
   // set the digital pins as output:

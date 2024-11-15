@@ -6,8 +6,8 @@
  * by Isaac100
  */
 
-const int trigPin = 9;
-const int echoPin = 10;
+const int trigPin = 13;
+const int echoPin = 11;
 
 float duration, distance;
 

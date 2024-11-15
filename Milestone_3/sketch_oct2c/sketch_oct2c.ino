@@ -15,16 +15,11 @@ Servo myservo;  // create servo object to control a servo
 int pos = 0;    // variable to store the servo position
 
 void setup() {
-  myservo.attach(9);  // attaches the servo on pin 9 to the servo object
+  myservo.attach(8);  // attaches the servo on pin 9 to the servo object
 }
 
 void loop() {
-  delay(1000);
-
-  myservo.write(90);
-
-  delay(1000);
-
+  myservo.write(0);
 
  /*
   for (pos = 0; pos <= 120; pos += 1) { // goes from 0 degrees to 180 degrees

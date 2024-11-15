@@ -33,6 +33,7 @@ void loop() {
   //  Now, read and ignore all characters from the serial monitor
   while (Serial.available() > 0) {
     Serial.read();  //  Ignoring the returned value just empties the queue of characters
+
   }
   Serial.println("======================================");
   // Get an valid integer from the user
