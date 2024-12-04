@@ -27,6 +27,7 @@ const int totalReads    = 20;
 
 Servo basketServo;
 Servo sweepServo;
+Servo angleServo
 Servo sortServo;
 Servo leftBucket;
 Servo rightBucket;
@@ -59,11 +60,14 @@ void setup() {
   pinMode(rightB, OUTPUT);
   pinMode(trigPin, OUTPUT);
   pinMode(echoPin, INPUT);
+  pinMode(frontButton, INPUT);
   
+   
   basketServo.attach(9);
   sweepServo.attach(4);
   sortServo.attach(8);
   rightBucket.attach(10);
+  angleServo.attach(A1);
   leftBucket.attach(5);
 
   // geting servos in the correct position
@@ -75,7 +79,7 @@ void setup() {
   delay(200);
   leftBucket.write(160);
   delay(200);
-  rightBucket.write(10);
+  rightBucket.write(0);
   delay(200);
   
 
@@ -114,5 +118,12 @@ void loop() {
     case 7:
       blackRail();
       break;
+    case 8:
+      leftWall();
+      break;
+    case 9:
+      whiteRail();
+      break;
+
   }
 }

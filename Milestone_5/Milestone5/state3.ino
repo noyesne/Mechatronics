@@ -18,12 +18,12 @@ void state3() {
     platformStop();
     delay(200);
     platformBackward();
-    delay(300);
+    delay(400);
     platformStop();
     delay(300);
     sweepServo.write(20);
     delay(500);
-    basketServo.write(80);
+    basketServo.write(60);
     delay(500);
     for(int i = 0; i < 6; i++){
     platformForward();
@@ -32,7 +32,7 @@ void state3() {
     delay(100);
     }
     platformSpinRight();
-    delay(200);
+    delay(400);
     platformStop();
     
     
