@@ -5,8 +5,8 @@ void state1Setup(){
 }
 
 void state1(){
-  
-  if(digitalRead(frontButton) == LOW){
+
+  if(digitalRead(frontButton) == HIGH){
     delay(1000);
     delay(50);
     state2Setup();

@@ -28,11 +28,11 @@ void state5Setup() {
 void state5() {
   
   if (millis() - start >= 200) {
-    /*
+    
     Serial.print("Value: ");
     Serial.print(analogRead(lightSensor));
     Serial.print("\n");
-    */
+    
     sensorValue += analogRead(lightSensor);
     delay(50);
     readCounter++;
@@ -43,13 +43,12 @@ void state5() {
     Serial.println(sensorValue);
     int avg = sensorValue / 25;
     
-    /*
+    
     Serial.print("AVG: ");
     Serial.print(avg);
     Serial.print("\n");
-    */
-
-    if (avg >= 35 && avg <= 45) {
+    
+    if (avg >= 25 && avg <= 45) {
 
       //Black
       sortServo.write(180);
@@ -58,7 +57,7 @@ void state5() {
       blackCounter++;
     }
 
-    if (avg >= 10 && avg <= 30) {
+    if (avg >= 10 && avg <= 25) {
       sortServo.write(0);
       delay(500);
       sortServo.write(90);
@@ -82,7 +81,7 @@ void state5() {
     runThroughs++;
   }
 
-  if (runThroughs >= 10 || blackCounter >= 2) {
+  if (runThroughs >= 10) {
     state6Setup();
   }
 }
