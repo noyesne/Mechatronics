@@ -9,7 +9,7 @@ void blackRail() {
   platformStop();
   delay(200);
   platformSpinLeft();
-  delay(1500);
+  delay(2000);
   platformStop();
   delay(200);
   start = millis();

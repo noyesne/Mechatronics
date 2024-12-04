@@ -27,7 +27,7 @@ const int totalReads    = 20;
 
 Servo basketServo;
 Servo sweepServo;
-Servo angleServo
+Servo angleServo;
 Servo sortServo;
 Servo leftBucket;
 Servo rightBucket;

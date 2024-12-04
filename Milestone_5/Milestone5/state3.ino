@@ -14,7 +14,7 @@ void state3() {
   distance = (duration*.0343)/2;
   Serial.println(distance);
   delay(100);
-  if (distance < 10 && millis() - start >= 500) {
+  if (distance < 10) {
     platformStop();
     delay(200);
     platformBackward();
@@ -32,7 +32,7 @@ void state3() {
     delay(100);
     }
     platformSpinRight();
-    delay(400);
+    delay(800);
     platformStop();
     
     

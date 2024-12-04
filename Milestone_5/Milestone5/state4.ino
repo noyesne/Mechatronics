@@ -2,6 +2,7 @@ void state4Setup() {
   start = millis();
   state = 4;
   runThroughs++;
+  angleServo.write(50);
 }
 
 void state4() {

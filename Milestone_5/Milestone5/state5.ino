@@ -48,7 +48,7 @@ void state5() {
     Serial.print(avg);
     Serial.print("\n");
     
-    if (avg >= 25 && avg <= 45) {
+    if (avg >= 30 && avg <= 45) {
 
       //Black
       sortServo.write(180);
@@ -57,7 +57,7 @@ void state5() {
       blackCounter++;
     }
 
-    if (avg >= 10 && avg <= 25) {
+    if (avg >= 10 && avg <= 30) {
       sortServo.write(0);
       delay(500);
       sortServo.write(90);
@@ -66,9 +66,6 @@ void state5() {
 
 
     if (avg >= 80) {
-      if(blackCounter >= 2){
-        state6Setup();
-      }
       shimmy();
       delay(200);
       basketServo.write(120);
@@ -81,7 +78,7 @@ void state5() {
     runThroughs++;
   }
 
-  if (runThroughs >= 10) {
+  if (runThroughs >= 20) {
     state6Setup();
   }
 }

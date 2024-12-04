@@ -20,7 +20,7 @@ void state2() {
     platformBackward();
     delay(200);
     platformSpinLeft();
-    delay(900);
+    delay(2000);
     platformStop();
     delay(200);
     platformBackward();
