@@ -82,7 +82,7 @@ void state5() {
     runThroughs++;
   }
 
-  if (empty >= 3) {
+  if (empty >= 2) {
     state6Setup();
   }
 }

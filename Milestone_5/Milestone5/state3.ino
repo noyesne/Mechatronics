@@ -28,7 +28,7 @@ void state3() {
     delay(500);
     basketServo.write(60);
     delay(500);
-    for (int i = 0; i < 6; i++) {
+    for (int i = 0; i < 4; i++) {
       platformForward();
       delay(50);
       platformStop();
@@ -38,6 +38,11 @@ void state3() {
     platformSpinRight();
     delay(300);
     platformStop();
+    delay(200);
+    platformForward();
+    delay(100);
+    platformStop();
+    delay(200);
 
 
     state4Setup();

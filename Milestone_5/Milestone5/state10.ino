@@ -4,7 +4,7 @@ void nextBlockSetup(){
 
 void nextBlock(){
   platformForward();
-  delay(800);
+  delay(700);
   platformStop();
   delay(500);
   platformSpinLeft();
