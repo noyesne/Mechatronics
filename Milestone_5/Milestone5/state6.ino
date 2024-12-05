@@ -9,7 +9,7 @@ void state6Setup() {
 
 void state6() {
   platformBackward();
-  delay(3000);
+  delay(1000);
   platformStop();
   delay(200);
   blackRailSetup();

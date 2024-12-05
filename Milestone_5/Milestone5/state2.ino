@@ -14,13 +14,13 @@ void state2() {
   distance = (duration * .0343) / 2;
   Serial.println(distance);
   delay(100);
-  if (distance <= 10.0 && millis() - start >= 1000) {
+  if (distance <= 10.0) {
     platformStop();
     delay(200);
     platformBackward();
-    delay(200);
+    delay(400);
     platformSpinLeft();
-    delay(2000);
+    delay(1000);
     platformStop();
     delay(200);
     platformBackward();

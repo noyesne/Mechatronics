@@ -5,11 +5,17 @@ void blackRailSetup() {
 
 void blackRail() {
   platformForward();
-  delay(800);
+  delay(500);
   platformStop();
   delay(200);
-  platformSpinLeft();
-  delay(2000);
+  if (!blackBlock) {
+    platformSpinLeft();
+    delay(1500);
+  }
+  else{
+    platformSpinRight();
+    delay(1500);
+  }
   platformStop();
   delay(200);
   start = millis();
@@ -19,10 +25,17 @@ void blackRail() {
   delay(500);
   platformStop();
   delay(200);
-  leftBucket.write(160);
-  delay(5000);
-  Serial.write("DUMPED!");
+
+  if(!blackBlock){
   leftBucket.write(0);
-  delay(200);
+  delay(1000);
+  leftBucket.write(160);
+  delay(2000);
+  }
+  else{
+    rightBucket.write(160);
+    delay(1000);
+    rightBucket.write(0);
+  }
   leftWallSetup();
 }

@@ -14,7 +14,7 @@
   duration = pulseIn(echoPin, HIGH);
   distance = (duration * .0343) / 2;
   Serial.println(distance);
-  delay(500);
+  delay(100);
 
   if (distance <= 10) {
     platformStop();

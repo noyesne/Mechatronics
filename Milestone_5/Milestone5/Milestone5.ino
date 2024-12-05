@@ -17,9 +17,9 @@ const int rightB        = 7;  // Right Motor B pin
 
 
 
-const int frontButton   = 12;
+const int frontButton   = A1;
 const int trigPin       = 13;
-const int echoPin       = 11;
+const int echoPin       = 12;
 
 const int lightSensor   = A0;
 
@@ -36,14 +36,20 @@ Servo rightBucket;
 
 int state = 0;            // variable to hold current state
 unsigned long start;  // will store the time the state was setup 
-int readCounter = 0;
-long sensorValue = 0;
-int runThroughs = 0;
-int posCounter = 1;     //this will know when each wall has been hit
-int attempt = 0;
-bool flag = false;
+int readCounter   = 0;
+long sensorValue  = 0;
+int runThroughs   = 0;
+int posCounter    = 1;     //this will know when each wall has been hit
+int attempt       = 0;
+bool flag         = false;
 
-int blackCounter = 0;
+int blackCounter  = 0;
+int whiteCounter  = 0;
+int empty         = 0;
+
+bool starting     = true;
+bool blackBlock   = false;
+bool marble       = false;
 
 
 float duration, distance;
@@ -67,7 +73,7 @@ void setup() {
   sweepServo.attach(4);
   sortServo.attach(8);
   rightBucket.attach(10);
-  angleServo.attach(A1);
+  angleServo.attach(11);
   leftBucket.attach(5);
 
   // geting servos in the correct position
@@ -102,15 +108,12 @@ void loop() {
       break;
     case 3:
       state3();
-      
       break;
     case 4:
       state4();
-      
       break;
     case 5:
       state5();
-      
       break;
     case 6:
       state6();
@@ -123,6 +126,9 @@ void loop() {
       break;
     case 9:
       whiteRail();
+      break;
+    case 10:
+      nextBlock();
       break;
 
   }

@@ -21,7 +21,7 @@ void state5Setup() {
     j++;
   }
 
-
+  empty = 0;
   attempt = 0;
 }
 
@@ -55,6 +55,7 @@ void state5() {
       delay(500);
       sortServo.write(90);
       blackCounter++;
+      empty = 0;
     }
 
     if (avg >= 10 && avg <= 30) {
@@ -62,6 +63,8 @@ void state5() {
       delay(500);
       sortServo.write(90);
       delay(200);
+      whiteCounter++;
+      empty = 0;
     }
 
 
@@ -69,8 +72,9 @@ void state5() {
       shimmy();
       delay(200);
       basketServo.write(120);
-      delay(200);
-      basketServo.write(140);
+      //delay(200);
+      //basketServo.write(140);
+      empty++;
     }
     readCounter = 0;
     sensorValue = 0;
@@ -78,7 +82,7 @@ void state5() {
     runThroughs++;
   }
 
-  if (runThroughs >= 20) {
+  if (empty >= 3) {
     state6Setup();
   }
 }
